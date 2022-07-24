@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  width: 375px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../imags/bg-mobile.png);
+  background-size: cover;
+  padding: 50px 10px;
+  margin: auto;
+}
+
+main .main {
+  width: 90%;
+  border-radius: 10px;
+  border-top-right-radius: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(228, 56%, 26%);
+  margin: 50px auto;
+  padding: 50px;
+}
+main .main .logo {
+  margin-bottom: 50px;
+}
+main .main .logo img {
+  width: 150px;
+}
+
+main .main .icons {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+main .main .icons img {
+  background-color: hsl(229, 57%, 11%);
+  border: 15px solid hsl(229, 57%, 11%);
+  border-radius: 10px;
+}
+
+main .storage {
+  width: 90%;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+main .storage > p {
+  color: rgb(174, 174, 174);
+  font-weight: 400;
+  text-align: center;
+}
+main .storage > p b {
+  color: white;
+}
+main .storage .st {
+  width: 100%;
+  height: 15px;
+  background-color: hsl(229, 57%, 11%);
+  border: 2px solid hsl(229, 57%, 11%);
+  border-radius: 7.5px;
+  position: relative;
+}
+
+main .storage .st .bar {
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  border-radius: inherit;
+  position: relative;
+}
+
+main .storage .st .bar::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: white;
+  position: absolute;
+  right: 1px;
+  top: 1;
+  border-radius: 50%;
+}
+
+main .storage .st .text {
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  padding: 20px 5px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  right: 0;
+  top: 50px;
+  transform: translateX(-50%);
+}
+
+main .storage .st .text span {
+  font-size: 30px;
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+main .storage .cap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url(../imags/bg-desktop.png);
+    background-size: cover;
+    background-color: hsl(228, 56%, 26%);
+  }
+  main {
+    width: 1200px;
+    background: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 500px;
+  }
+
+  main .main {
+    width: 40%;
+    height: fit-content;
+    margin: 0 0;
+    border-top-right-radius:34% 60%;
+  }
+  main .main .icons {
+    width: 50%;
+  }
+  main .storage {
+    width: 55%;
+    margin: 0 0;
+    height: fit-content;
+  }
+
+  main .storage .st .text {
+     right: 0;
+     top: -125px;
+     transform: translateX(0);
+  }
+  main .storage .st::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: -70px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+
+  }
+}
+
